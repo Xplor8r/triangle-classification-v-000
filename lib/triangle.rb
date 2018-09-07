@@ -17,7 +17,7 @@ class Triangle
         :scalene
       end
     else
-      if [a,b,c].max > [a,b,c].inject(:+)/2.0
+      if [a,b,c].max < [a,b,c].sum/2.0
         begin
           raise TriangleError
         rescue TriangleError => error
