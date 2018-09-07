@@ -8,8 +8,11 @@ class Triangle
   end
   
   def is_triangle?
-    if !([a,b,c].max < [a,b,c].inject(:+)/2.0)
-      raise TriangleError
+    if !([a,b,c].max < [a,b,c].inject(:+)/2)
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+      
     end
   end
   
