@@ -8,19 +8,19 @@ class Triangle
   end
   
   def kind
-    if [a,b,c].max < [a,b,c].inject(:+)/2.0
+    if [a,b,c].max > [a,b,c].inject(:+)/2.0
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+    else
       if a == b && b == c
         :equilateral
       elsif a == b || b == c || a == c
         :isosceles
       else
         :scalene
-      end
-    else
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
       end
     end
   end
