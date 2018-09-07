@@ -9,7 +9,7 @@ class Triangle
   
   def kind
     if a = b && b = c
-  
+      
   end
   
   class TriangleError < StandardError
