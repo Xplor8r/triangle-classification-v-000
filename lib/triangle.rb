@@ -8,22 +8,16 @@ class Triangle
   end
   
   def kind
-    if a == b && b == c
-      :equilateral
-    elsif a == b || b == c || a == c
-      :isosceles
-    else
-      :scalene
-    end
-    def is_triangle?(a,b,c)
-  [a,b,c].max < [a,b,c].sum/2.0
-end
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
+    if [a,b,c].max < [a,b,c].inject(:+)/2.0
+      if a == b && b == c
+        :equilateral
+      elsif a == b || b == c || a == c
+        :isosceles
+      else
+        :scalene
       end
-    end
+    else
+      
   end
   
   class TriangleError < StandardError
