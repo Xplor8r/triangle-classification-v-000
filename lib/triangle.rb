@@ -13,11 +13,7 @@ class Triangle
   
   def kind
     if !is_triangle?
-      begin
         raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
     end
     if a == b && b == c
       :equilateral
