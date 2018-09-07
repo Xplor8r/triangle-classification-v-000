@@ -19,7 +19,7 @@ class Triangle
     else
       begin
         raise TriangleError
-      rescue PartnerError => error
+      rescue TriangleError => error
           puts error.message
       end
     end
