@@ -16,12 +16,7 @@ class Triangle
       else
         :scalene
       end
-    else
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-          puts error.message
-      end
+    
     end
   end
   
