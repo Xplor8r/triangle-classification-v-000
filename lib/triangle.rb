@@ -15,6 +15,13 @@ class Triangle
     else
       :scalene
     end
+    if [a,b,c].max > [a,b,c].sum/2.0
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+    end
   end
   
   class TriangleError < StandardError
