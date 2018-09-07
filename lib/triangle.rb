@@ -8,9 +8,7 @@ class Triangle
   end
   
   def is_triangle?(a,b,c)
-    if !()
-    
-  else
+    if !([a,b,c].max < [a,b,c].sum/2.0)
       raise TriangleError
     end
   end
