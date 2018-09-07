@@ -13,7 +13,8 @@ class Triangle
     elsif a = b || b = c || a = c
       :isosceles
     else
-      
+      :scalene
+    end
   end
   
   class TriangleError < StandardError
