@@ -18,4 +18,4 @@ class Triangle
 
 end
 
-end
+
