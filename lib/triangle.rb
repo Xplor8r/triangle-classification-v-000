@@ -14,7 +14,7 @@ class Triangle
   end
   
   def kind
- 
+    is_triangle?
     if a == b && b == c
       :equilateral
     elsif a == b || b == c || a == c
