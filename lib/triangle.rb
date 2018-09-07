@@ -9,7 +9,6 @@ class Triangle
   
   def is_triangle?
     if !([a,b,c].max < [a,b,c].inject(:+)/2.0)
-      begin
         raise TriangleError
       rescue TriangleError => error
         puts error.message
@@ -29,9 +28,7 @@ class Triangle
   end
   
   class TriangleError < StandardError
-    def message
       "That is not a triangle!"
-    end
   end
 
 end
