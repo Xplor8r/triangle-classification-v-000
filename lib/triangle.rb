@@ -16,7 +16,14 @@ class Triangle
       else
         :scalene
       end
-    
+    else
+      if [a,b,c].max > [a,b,c].inject(:+)/2.0
+        begin
+          raise TriangleError
+        rescue TriangleError => error
+          puts error.message
+        end
+      end
     end
   end
   
