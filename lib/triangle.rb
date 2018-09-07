@@ -8,13 +8,15 @@ class Triangle
   end
   
   def is_triangle?(a,b,c)
+    if !()
     [a,b,c].max < [a,b,c].sum/2.0
+  else
+      raise TriangleError
+    end
   end
   
   def kind
-    if !is_triangle?
-      raise TriangleError
-    end
+   
     if a == b && b == c
       :equilateral
     elsif a == b || b == c || a == c
