@@ -13,7 +13,7 @@ class Triangle
   
   def kind
     if !is_triangle?
-        raise TriangleError
+      raise TriangleError
     end
     if a == b && b == c
       :equilateral
@@ -26,9 +26,6 @@ class Triangle
   end
   
   class TriangleError < StandardError
-    def message
-      "That is not a Triangle!"
-    end
   end
 
 end
