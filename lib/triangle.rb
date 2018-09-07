@@ -13,9 +13,9 @@ class Triangle
   end
   
   class TriangleError < StandardError
-<<<<<<< HEAD
+
   end
-=======
+
 end
->>>>>>> a4b7faf54f42e8c22b5a886ace1ae8c5c7ad69eb
+
 end
